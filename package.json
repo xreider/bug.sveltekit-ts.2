@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "--------------------> dev <--------------------": "",
+    "dev:client": "cd client & npm run dev",
+    "dev:api": "cd api & npm run dev",
+    "dev-all": "concurrently npm run:dev:*",
+    "--------------------> build <--------------------": "",
+    "build:client": "cd client & npm run build",
+    "build-all": "concurrently npm run:build:*",
+    "--------------------> start <--------------------": "",
+    "start:client": "cd client & npm run start",
+    "start:api": "cd api & npm run start",
+    "start-all": "concurrently npm run:start:*",
+    "--------------------> install <--------------------": "",
+    "inst:client": "cd client & rimraf node_modules & rimraf package-lock.json & npm run install",
+    "inst:api": "cd api & rimraf node_modules & rimraf package-lock.json & npm run install",
+    "inst-all": "npm run global add rimraf && rimraf node_modules && rimraf package-lock.json && npm run install && concurrently npm run:inst:*"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.7"
+  },
+  "name": "words.cards.22.serious",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

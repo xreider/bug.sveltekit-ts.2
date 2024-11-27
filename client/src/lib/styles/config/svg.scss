@@ -1,0 +1,15 @@
+$color: #171544;
+
+*[fill='#{$color}'] {
+	&,
+	& * {
+		fill: var(--color-text) !important;
+	}
+}
+
+*[stroke='#{$color}'] {
+	&,
+	& * {
+		stroke: var(--color-text) !important;
+	}
+}
